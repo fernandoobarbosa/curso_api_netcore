@@ -12,6 +12,7 @@ namespace Api.Application.Controllers
 {
     
     [Route("api/[controller]")]
+    [Authorize("Bearer")]
     [ApiController]
     public class UsersController : ControllerBase
     {
@@ -21,7 +22,7 @@ namespace Api.Application.Controllers
             _service = service;
         }
         // GET: api/<UsersController>
-        [Authorize("Bearer")]
+       
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {
