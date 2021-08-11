@@ -14,6 +14,8 @@ namespace Api.CrossCutting.DependencyInjection
         public static void ConfigureDependenciesService(IServiceCollection serviceCollection)
         {
             serviceCollection.AddTransient<IUserService, UserService>(); //para cada operação de injeção de dependencia vai criar uma instancia
+
+            serviceCollection.AddTransient<ILoginService, LoginService>();
         }
     }
 }
