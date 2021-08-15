@@ -21,7 +21,7 @@ namespace Api.CrossCutting.DependencyInjection
             serviceCollection.AddScoped<IUserRepository, UserImplementation>();
 
             var serverVersion = new MySqlServerVersion(new Version(8, 0, 25));
-            var connectionString = "Server=localhost;Port=3306;Database=dbAPI;Uid=root;Pwd= ";
+            var connectionString = "Server=localhost;Port=3306;Database=dbAPI;Uid=root;Pwd=password";
 
             serviceCollection.AddDbContext<MyContext>(
                 options => options.UseMySql(connectionString, serverVersion)

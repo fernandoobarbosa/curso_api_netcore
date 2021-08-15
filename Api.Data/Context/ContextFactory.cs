@@ -9,7 +9,7 @@ namespace Api.Data.Context
         public MyContext CreateDbContext(string[] args)
         {
             var serverVersion = new MySqlServerVersion(new Version(8, 0, 25));
-            var connectionString = "Server=localhost;Port=3306;Database=dbAPI;Uid=root;Pwd= ";
+            var connectionString = "Server=localhost;Port=3306;Database=dbAPI;Uid=root;Pwd=password";
             var optionsBuilder = new DbContextOptionsBuilder<MyContext>();
 
             optionsBuilder.UseMySql(connectionString, serverVersion);
