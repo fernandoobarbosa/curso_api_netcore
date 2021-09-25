@@ -29,6 +29,7 @@ namespace Api.Application.Controllers
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState); //400 bad request - solicitação inválida
+                //getall
             }
 
             try
